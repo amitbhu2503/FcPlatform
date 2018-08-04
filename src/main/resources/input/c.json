@@ -1,0 +1,17 @@
+{
+  "branch":{
+    "location":"Mumbai",
+    "totalCollection":"124.00",
+    "locationId":"BOM-1234-457"
+  },
+  "orders":[
+    {
+      "orderId":1,
+      "billAmount":"62.00"
+    },
+    {
+      "orderId":2,
+      "billAmount":"70.00"
+    }
+  ]
+}
