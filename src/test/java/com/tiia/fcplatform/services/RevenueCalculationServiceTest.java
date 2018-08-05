@@ -5,6 +5,7 @@ import org.junit.Before;
 import org.junit.Test;
 import org.mockito.Mockito;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 
 import java.util.Date;
 
@@ -20,7 +21,14 @@ public class RevenueCalculationServiceTest {
     }
 
     @Test(expected = FcPlatformException.class)
-    public void processCalculations() {
+    public void throwsError() {
         revenueCalculationService.processCalculations(null, null, new Date());
+    }
+
+    @Test
+    public void processCalculations() {
+        String inputDirPath = "E:/amitg/github/FcPlatform/src/main/resources/input";
+        String outputDirPath = "E:/amitg/github/FcPlatform/src/main/resources/output";
+        revenueCalculationService.processCalculations(inputDirPath, outputDirPath, new Date());
     }
 }

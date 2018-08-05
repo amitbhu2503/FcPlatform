@@ -26,7 +26,7 @@ public class RevenueCalculationScheduler {
     @Value("${com.tiia.pricecollection.outputDir}")
     private String outputDirPath;
 
-    @Scheduled(fixedDelay = 100000)
+    @Scheduled(cron= "${com.tiia.pricecollection.schedulingTime}")
     public void calculate(){
         Date schedulerStartDate = new Date();
         logger.info("Started processing revenue collector for date {} ", schedulerStartDate);
