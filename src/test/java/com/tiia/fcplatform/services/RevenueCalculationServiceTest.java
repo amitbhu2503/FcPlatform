@@ -20,11 +20,6 @@ public class RevenueCalculationServiceTest {
         revenueCalculationService = Mockito.mock(RevenueCalculationService.class);
     }
 
-    @Test(expected = FcPlatformException.class)
-    public void throwsError() {
-        revenueCalculationService.processCalculations(null, null, new Date());
-    }
-
     @Test
     public void processCalculations() {
         String inputDirPath = "E:/amitg/github/FcPlatform/src/main/resources/input";
